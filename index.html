@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DineSmart</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Full background image (contains all design elements already) -->
+  <div class="bg" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      <img src="assets/logo.png" class="brand__logo" alt="DineSmart Logo">
+      <span class="brand__name">DineSmart</span>
+    </div>
+
+    <nav class="nav" id="nav">
+      <a href="#food" class="nav__link">OUR FOOD</a>
+      <a href="#team" class="nav__link">OUR TEAM</a>
+      <a href="#gallery" class="nav__link">GALLERY</a>
+      <a href="#blog" class="nav__link">BLOG</a>
+      <a href="#contact" class="nav__link">CONTACT</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- MOBILE MENU (overlay) -->
+  <div class="mobileMenu" id="mobileMenu" aria-hidden="true">
+    <div class="mobileMenu__panel">
+      <button class="mobileMenu__close" id="closeMenu" aria-label="Close menu">✕</button>
+      <a href="#food" class="mobileMenu__link">OUR FOOD</a>
+      <a href="#team" class="mobileMenu__link">OUR TEAM</a>
+      <a href="#gallery" class="mobileMenu__link">GALLERY</a>
+      <a href="#blog" class="mobileMenu__link">BLOG</a>
+      <a href="#contact" class="mobileMenu__link">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <main class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">
+        THE BEST<br/>
+        QUALITY
+      </h1>
+      <div class="hero__subtitle">THAT’S ALL!</div>
+
+      <p class="hero__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+        Risus commodo viverra maecenas accumsan lacus vel facilisis.
+      </p>
+
+      <a class="cta" href="#food">START NOW</a>
+    </div>
+
+    <!-- Optional (UI overlay only) -->
+    <div class="social">
+      <a class="social__btn" href="#" aria-label="Instagram">◎</a>
+      <a class="social__btn" href="#" aria-label="Facebook">f</a>
+      <a class="social__btn" href="#" aria-label="X">x</a>
+      <a class="social__btn" href="#" aria-label="WhatsApp">☏</a>
+    </div>
+  </main>
+
+  <!-- Sections (placeholders) -->
+  <section id="food" class="section"><h2>Our Food</h2></section>
+  <section id="team" class="section"><h2>Our Team</h2></section>
+  <section id="gallery" class="section"><h2>Gallery</h2></section>
+  <section id="blog" class="section"><h2>Blog</h2></section>
+  <section id="contact" class="section"><h2>Contact</h2></section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
