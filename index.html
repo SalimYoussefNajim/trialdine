@@ -1,18 +1,18 @@
-<!-- =========================
-     index.html
-========================= -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>DineSmart</title>
-  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- IMPORTANT: must match your repo folders exactly: /css/style.css -->
+  <link rel="stylesheet" href="./css/style.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
   <!-- Background -->
   <div class="bg">
@@ -23,33 +23,30 @@
 
   <main class="page">
     <section class="card" aria-label="DineSmart landing">
+
       <!-- NAV -->
       <header class="nav">
+        <!-- LOGO OUTSIDE PILL -->
+        <a class="brand" href="#">
+          <span class="brand__mark">
+            <img src="./assets/logo.png" class="logo-img" alt="Logo" />
+          </span>
+        </a>
 
-  <!-- LOGO OUTSIDE PILL -->
-  <a class="brand" href="#">
-    <span class="brand__mark">
-      <img src="assets/logo.png" class="logo-img" alt="Logo" />
-    </span>
-  </a>
+        <!-- PILL ONLY FOR NAV ITEMS -->
+        <div class="nav__pill">
+          <nav class="nav__links">
+            <a href="#about">About</a>
+            <a href="#discover">Discover</a>
+            <a href="#map">Map</a>
+          </nav>
 
-  <!-- PILL ONLY FOR NAV ITEMS -->
-  <div class="nav__pill">
-    <nav class="nav__links">
-      <a href="#about">About</a>
-      <a href="#discover">Discover</a>
-      <a href="#map">Map</a>
-    </nav>
-
-    <div class="nav__actions">
-      <button class="btn btn--ghost" id="loginBtn">Log in</button>
-      <button class="btn btn--gold" id="signupBtn">Sign Up</button>
-    </div>
-  </div>
-
-</header>
-
-
+          <div class="nav__actions">
+            <button class="btn btn--ghost" id="loginBtn" type="button">Log in</button>
+            <button class="btn btn--gold" id="signupBtn" type="button">Sign Up</button>
+          </div>
+        </div>
+      </header>
 
       <!-- HERO -->
       <div class="hero">
@@ -61,32 +58,33 @@
 
           <div class="hero__cta">
             <button class="btn btn--gold btn--xl btn--white-text" type="button" id="gettingStarted">
-  GETTING STARTED
-</button>
+              GETTING STARTED
+            </button>
           </div>
         </div>
 
+        <!-- ✅ THIS WAS MISSING/BROKEN IN YOUR HTML -->
+        <div class="hero__right">
           <div class="scene">
-            <!-- Dish image: replace src with your asset -->
-            <img class="dish" src="assets/dish.png" alt="" />
-            <!-- Solid gold wave -->
-<svg class="gold-wave" viewBox="0 0 900 260" preserveAspectRatio="none" aria-hidden="true">
-  <path
-    d="M900,260 H0
-       C180,240 260,190 360,165
-       C480,135 585,155 690,130
-       C790,105 845,55 900,0
-       V260 Z"
-    fill="#C9A227"
-  />
-</svg>
+            <img class="dish" src="./assets/dish.png" alt="" />
 
+            <svg class="gold-wave" viewBox="0 0 900 260" preserveAspectRatio="none" aria-hidden="true">
+              <path
+                d="M900,260 H0
+                   C180,240 260,190 360,165
+                   C480,135 585,155 690,130
+                   C790,105 845,55 900,0
+                   V260 Z"
+                fill="#C9A227"
+              />
+            </svg>
           </div>
         </div>
       </div>
+
     </section>
 
-    <!-- Sections (optional anchors) -->
+    <!-- Sections (anchors) -->
     <section class="anchors">
       <div id="about"></div>
       <div id="discover"></div>
@@ -144,19 +142,16 @@
           Create account
         </button>
 
-        <div class="divider">
-          <span>or</span>
-        </div>
+        <div class="divider"><span>or</span></div>
 
         <button class="btn btn--google" type="button" id="googleBtn">
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-    class="google-icon"
-    alt="Google logo"
-  />
-  Continue with Google
-</button>
-
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+            class="google-icon"
+            alt="Google logo"
+          />
+          Continue with Google
+        </button>
 
         <p class="fineprint" id="switchText">
           Already have an account?
@@ -166,6 +161,7 @@
     </div>
   </div>
 
-  <script src="js/app.js"></script>
+  <!-- IMPORTANT: must match your repo folders exactly: /js/app.js -->
+  <script src="./js/app.js"></script>
 </body>
 </html>
