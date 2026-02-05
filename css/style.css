@@ -22,7 +22,7 @@ body{
   position: fixed;
   inset: 0;
   z-index: -10;
-  background-image: url("/assets/background.png");
+  background-image: url("assets/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -259,3 +259,4 @@ body{
   .social{ display:none; } /* optional on mobile */
   .hero{ padding: 65px 0 55px; }
 }
+
