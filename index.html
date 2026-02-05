@@ -1,86 +1,171 @@
-<!DOCTYPE html>
+<!-- =========================
+     index.html
+========================= -->
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>DineSmart</title>
-
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 <body>
+  <!-- Background -->
+  <div class="bg">
+    <div class="bg__glow bg__glow--tl"></div>
+    <div class="bg__glow bg__glow--br"></div>
+    <div class="bg__grain"></div>
+  </div>
 
-  <!-- Full background image (contains all design elements already) -->
-  <div class="bg" aria-hidden="true"></div>
+  <main class="page">
+    <section class="card" aria-label="DineSmart landing">
+      <!-- NAV -->
+      <header class="nav">
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="brand">
-      <img src="assets/logo.png" class="brand__logo" alt="DineSmart Logo">
-      <span class="brand__name">DineSmart</span>
-    </div>
+  <!-- LOGO OUTSIDE PILL -->
+  <a class="brand" href="#">
+    <span class="brand__mark">
+      <img src="assets/logo.png" class="logo-img" alt="Logo" />
+    </span>
+  </a>
 
-    <nav class="nav" id="nav">
-      <a href="#food" class="nav__link">OUR FOOD</a>
-      <a href="#team" class="nav__link">OUR TEAM</a>
-      <a href="#gallery" class="nav__link">GALLERY</a>
-      <a href="#blog" class="nav__link">BLOG</a>
-      <a href="#contact" class="nav__link">CONTACT</a>
+  <!-- PILL ONLY FOR NAV ITEMS -->
+  <div class="nav__pill">
+    <nav class="nav__links">
+      <a href="#about">About</a>
+      <a href="#discover">Discover</a>
+      <a href="#map">Map</a>
     </nav>
 
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
-
-  <!-- MOBILE MENU (overlay) -->
-  <div class="mobileMenu" id="mobileMenu" aria-hidden="true">
-    <div class="mobileMenu__panel">
-      <button class="mobileMenu__close" id="closeMenu" aria-label="Close menu">✕</button>
-      <a href="#food" class="mobileMenu__link">OUR FOOD</a>
-      <a href="#team" class="mobileMenu__link">OUR TEAM</a>
-      <a href="#gallery" class="mobileMenu__link">GALLERY</a>
-      <a href="#blog" class="mobileMenu__link">BLOG</a>
-      <a href="#contact" class="mobileMenu__link">CONTACT</a>
+    <div class="nav__actions">
+      <button class="btn btn--ghost" id="loginBtn">Log in</button>
+      <button class="btn btn--gold" id="signupBtn">Sign Up</button>
     </div>
   </div>
 
-  <!-- HERO -->
-  <main class="hero">
-    <div class="hero__content">
-      <h1 class="hero__title">
-        THE BEST<br/>
-        QUALITY
-      </h1>
-      <div class="hero__subtitle">THAT’S ALL!</div>
+</header>
 
-      <p class="hero__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-        Risus commodo viverra maecenas accumsan lacus vel facilisis.
-      </p>
 
-      <a class="cta" href="#food">START NOW</a>
-    </div>
 
-    <!-- Optional (UI overlay only) -->
-    <div class="social">
-      <a class="social__btn" href="#" aria-label="Instagram">◎</a>
-      <a class="social__btn" href="#" aria-label="Facebook">f</a>
-      <a class="social__btn" href="#" aria-label="X">x</a>
-      <a class="social__btn" href="#" aria-label="WhatsApp">☏</a>
-    </div>
+      <!-- HERO -->
+      <div class="hero">
+        <div class="hero__left">
+          <h1 class="hero__title">Dine Smarter,<br/>Not Harder</h1>
+          <p class="hero__desc">
+            Discover restaurant menus instantly. Connect with your favorite eateries and explore culinary experiences like never before.
+          </p>
+
+          <div class="hero__cta">
+            <button class="btn btn--gold btn--xl btn--white-text" type="button" id="gettingStarted">
+  GETTING STARTED
+</button>
+          </div>
+        </div>
+
+          <div class="scene">
+            <!-- Dish image: replace src with your asset -->
+            <img class="dish" src="assets/dish.png" alt="" />
+            <!-- Solid gold wave -->
+<svg class="gold-wave" viewBox="0 0 900 260" preserveAspectRatio="none" aria-hidden="true">
+  <path
+    d="M900,260 H0
+       C180,240 260,190 360,165
+       C480,135 585,155 690,130
+       C790,105 845,55 900,0
+       V260 Z"
+    fill="#C9A227"
+  />
+</svg>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sections (optional anchors) -->
+    <section class="anchors">
+      <div id="about"></div>
+      <div id="discover"></div>
+      <div id="map"></div>
+    </section>
   </main>
 
-  <!-- Sections (placeholders) -->
-  <section id="food" class="section"><h2>Our Food</h2></section>
-  <section id="team" class="section"><h2>Our Team</h2></section>
-  <section id="gallery" class="section"><h2>Gallery</h2></section>
-  <section id="blog" class="section"><h2>Blog</h2></section>
-  <section id="contact" class="section"><h2>Contact</h2></section>
+  <!-- MOBILE MENU -->
+  <div class="mobileMenu" id="mobileMenu" aria-hidden="true">
+    <div class="mobileMenu__panel">
+      <div class="mobileMenu__top">
+        <span class="mobileMenu__title">Menu</span>
+        <button class="btn btn--ghost" id="closeMenu" type="button">Close</button>
+      </div>
+      <a href="#about" class="mobileMenu__link">About</a>
+      <a href="#discover" class="mobileMenu__link">Discover</a>
+      <a href="#map" class="mobileMenu__link">Map</a>
+      <div class="mobileMenu__actions">
+        <button class="btn btn--ghost" id="loginBtn2" type="button">Log in</button>
+        <button class="btn btn--gold" id="signupBtn2" type="button">Sign Up</button>
+      </div>
+    </div>
+  </div>
 
-  <script src="js/script.js"></script>
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__backdrop" data-close="true"></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" id="modalClose" aria-label="Close" type="button">✕</button>
+
+      <div class="modal__header">
+        <h2 class="modal__title" id="modalTitle">Sign up</h2>
+        <p class="modal__subtitle" id="modalSubtitle">
+          Sign up to explore restaurants and access special features
+        </p>
+      </div>
+
+      <form class="form" id="authForm">
+        <label class="field">
+          <span>Email</span>
+          <input type="email" placeholder="you@example.com" required />
+        </label>
+
+        <label class="field" id="nameField">
+          <span>Full name</span>
+          <input type="text" placeholder="Your name" />
+        </label>
+
+        <label class="field">
+          <span>Password</span>
+          <input type="password" placeholder="••••••••" minlength="6" required />
+        </label>
+
+        <button class="btn btn--gold btn--xl" type="submit" id="primaryAuthBtn">
+          Create account
+        </button>
+
+        <div class="divider">
+          <span>or</span>
+        </div>
+
+        <button class="btn btn--google" type="button" id="googleBtn">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+    class="google-icon"
+    alt="Google logo"
+  />
+  Continue with Google
+</button>
+
+
+        <p class="fineprint" id="switchText">
+          Already have an account?
+          <button class="link" type="button" id="switchMode">Log in</button>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
